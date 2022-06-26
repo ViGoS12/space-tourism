@@ -1,7 +1,7 @@
-import React from 'react'
+import styles from './scss/Home.module.scss'
 
 const Home = () => {
-  return <div>Home</div>
+  return <div className={styles.homeImg}></div>
 }
 
 export default Home

@@ -1,7 +1,10 @@
-import React from 'react'
+// import Header from '../components/header/'
+import { Outlet } from 'react-router-dom'
 
-const AppLayout = () => {
-  return <div>AppLayout</div>
+export default function AppLayout() {
+  return (
+    <div className='wrapper'>
+      <Outlet />
+    </div>
+  )
 }
-
-export default AppLayout
