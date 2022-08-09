@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 import logo from '../../assets/shared/logo.svg'
+import { memo } from 'react'
 
 const Header: React.FC = () => {
   return (
@@ -37,4 +38,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
+export default memo(Header)
