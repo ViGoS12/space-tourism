@@ -1,38 +1,32 @@
-import classNames from 'classnames'
 import { Link } from 'react-router-dom'
 import styles from './Header.module.scss'
 import logo from '../../assets/shared/logo.svg'
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.conteiner}>
+      <div className={styles.header__container}>
         <img src={logo} alt=''></img>
-        <div className={styles.menu}>
-          <div className={styles.menu__line}></div>
-          <ul className={styles.menu__list}>
-            <li className={styles.menu__item}>
-              <Link
-                to='/'
-                className={classNames(
-                  styles.menu__selected,
-                  styles.menu__link
-                )}>
+        <div className={styles.header__menu}>
+          <div className={styles.header__line} />
+          <ul className={styles.header__list}>
+            <li className={styles.header__item}>
+              <Link to='/'>
                 <span>00</span> HOME
               </Link>
             </li>
-            <li className={styles.menu__item}>
-              <Link to='/destination' className={styles.menu__link}>
+            <li className={styles.header__item}>
+              <Link to='/destination'>
                 <span>01</span> DESTINATION
               </Link>
             </li>
-            <li className={styles.menu__item}>
-              <Link to='/crew' className={styles.menu__link}>
+            <li className={styles.header__item}>
+              <Link to='/crew'>
                 <span>02</span> CREW
               </Link>
             </li>
-            <li className={styles.menu__item}>
-              <Link to='/technology' className={styles.menu__link}>
+            <li className={styles.header__item}>
+              <Link to='/technology'>
                 <span>03</span> TECHNOLOGY
               </Link>
             </li>
