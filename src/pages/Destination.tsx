@@ -19,7 +19,7 @@ const Destination: React.FC = () => {
       <Header />
       <div className={styles.destination__container}>
         <div className={styles.destination__leftside}>
-          <h2 className={styles.destination__subtitle}>
+          <h2 className={styles.destination__heading}>
             <span>01</span> Pick your detination
           </h2>
           <img
