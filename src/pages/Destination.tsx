@@ -5,6 +5,7 @@ import styles from './scss/Destination.module.scss'
 import data from '../data/data.json'
 
 import { memo, useCallback, useState } from 'react'
+import classNames from 'classnames'
 
 const Destination: React.FC = () => {
   const [planetId, setPlanetId] = useState(0)
@@ -32,7 +33,12 @@ const Destination: React.FC = () => {
           <ul className={styles.destination__list}>
             {data.destinations.map((planetInfo, idx) => (
               <li
-                className={styles.destination__item}
+                className={classNames(
+                  styles.destination__item,
+                  planetId === idx
+                    ? styles.destination__active
+                    : styles.destination__hover
+                )}
                 key={idx}
                 onClick={() => onChangePlanet(idx)}>
                 {planetInfo.name}
