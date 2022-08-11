@@ -25,10 +25,23 @@
     letter-spacing: 2.7px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 16px;
-
     & span {
       font-weight: bold;
     }
+  }
+
+  &__hover {
+    :hover {
+      width: 100%;
+      padding-bottom: 1.9rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__active {
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    padding-bottom: 1.9rem;
   }
 
   &__menu {
